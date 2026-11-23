@@ -1,0 +1,54 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "Scalable Playwright test automation framework: UI, API and accessibility testing with Page Objects, custom fixtures, sharded CI and rich reporting.",
+  "author": {
+    "name": "Dilmi Senevirathna",
+    "url": "https://github.com/DilSenevirathna"
+  },
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:e2e": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:api": "playwright test --project=api",
+    "test:a11y": "playwright test --project=a11y",
+    "test:mobile": "playwright test --project=mobile-chrome",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:debug": "playwright test --debug --project=chromium",
+    "test:ui": "playwright test --ui",
+    "test:ci": "playwright test --reporter=github,html",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://www.saucedemo.com",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@eslint/js": "^9.0.0",
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^16.4.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-playwright": "^2.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DilSenevirathna/playwright-automation-framework.git"
+  },
+  "homepage": "https://github.com/DilSenevirathna/playwright-automation-framework#readme",
+  "bugs": {
+    "url": "https://github.com/DilSenevirathna/playwright-automation-framework/issues"
+  }
+}
